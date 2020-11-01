@@ -9,10 +9,10 @@ services:
       - POSTGRES_PASSWORD=postgres
   web:
     build: .
-    command: python manage.py runserver 0.0.0.0:8080
+    command: python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/quizapp
     ports:
-      - "8080:8080"
+      - "8000:8000"
     depends_on:
       - db
